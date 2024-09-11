@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://consumer.huawei.com/nl/ iiii
+  https://consumer.huawei.com/nl/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
