@@ -27,5 +27,166 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: auto;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+#logo {
+    margin-top: 0.7em;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    height: 2em;
+    width: 7em;
+}
+
+header span {
+    display: block;
+    height: 0.05em; 
+    background-color: rgb(224, 224, 224);
+    margin-top: -3.5em;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1em;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main {
+    margin-top: 2em;
+}
+
+h2 {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: large;
+    margin-top: 0.5em;
+}
+
+#Product {
+    height: 35em;
+    width: 50em;
+    margin-left: -13.5em;
+    margin-top: -9.5em;
+    margin-right: 0em;
+    position: relative;
+    z-index: 1;
+}
+
+main span {
+    display: block;
+    height: 0.6em; 
+    background-color: rgb(247, 247, 247); 
+    margin-top: -0.5em;
+    position: relative; 
+    z-index: 2; 
+}
+
+main section:nth-of-type(1) div {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 1em;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-ontdek, .btn-koop {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-decoration: none;
+    border-radius: 0.4em;
+    font-size: 0.9em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-ontdek {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-koop {
+    background-color: #ffffff;
+    color: #000000;
+    border: 0.1em solid #8d8d8d;
+}
+
+main section:nth-of-type(2) {
+    background-color: rgb(247, 247, 247);
+    padding-top: 3em;
+}
+
+#More {
+    margin-top: -1.5em;
+    font-weight: 600;
+}
+
+/* De container voor de lijst en de lijn */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+
+.horizontal-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.horizontal-list li {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #c0c0c0;
+    display: inline-block; 
+    padding-left: 1em; 
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    cursor: pointer;
+}
+
+.horizontal-list li.active {
+    color: #000000; 
+    font-weight: 500;
+}
+
+/* Chat gpt, prompt: Hoe kan je een animatie maken 
+dat de lijn onder de li in plaats van 
+instant verplaatst als je op een ander 
+klikt, maar dat hij schuift naar de andere? */
+#active-line {
+    position: absolute;
+    bottom: 0;
+    height: 0.2em;
+    background-color: #000000;
+    transition: left 0.4s ease, width 0.4s ease; 
+}
+
+
+
 
