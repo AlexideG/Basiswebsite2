@@ -40,7 +40,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="reame-images/1.1.png" width="375px" alt="">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
@@ -89,8 +89,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
   <img src="readme/Screenshot2024-09-20110208.png" width="375px" alt="">
+
   het was lastig om dit plaatje in het midden te krijgen, omdat de verhoudingen raar
   waren en de achtergrond wit was, waardoor het dus voor andere elementen ging zitten.
   Ik heb uiteindelijk het plaatje transparant gemaakt en ben daarna met margins gaan spelen
