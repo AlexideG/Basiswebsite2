@@ -57,6 +57,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  
 
 </details>
 
@@ -89,12 +90,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme/Screenshot2024-09-20110208.png" width="375px" alt="">
+  het was lastig om dit plaatje in het midden te krijgen, omdat de verhoudingen raar
+  waren en de achtergrond wit was, waardoor het dus voor andere elementen ging zitten.
+  Ik heb uiteindelijk het plaatje transparant gemaakt en ben daarna met margins gaan spelen
+  om hem perfect in het midden te krijgen.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Alexi          | Ingmar             | Merel        | Lucas      |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -104,10 +110,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Nav aanmaken met ul en li
+  - H1 toevoegen in de code 
+
+
 
 </details>
 
