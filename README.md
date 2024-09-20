@@ -39,7 +39,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://consumer.huawei.com/nl/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  https://consumer.huawei.com/nl/  home screen
+  home screen
   <img src="readme-images/1.1.png" width="375px" alt="">
   <img src="readme-images/1.2.png" width="375px" alt="">
   <img src="readme-images/1.3.png" width="375px" alt="">
@@ -47,9 +47,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/1.5.png" width="375px" alt="">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  Kopen HUAWEI WATCH GT 5
+  <img src="readme-images/2.1.png" width="375px" alt="">
+  <img src="readme-images/2.2.png" width="375px" alt="">
+  <img src="readme-images/2.3.png" width="375px" alt="">
+  <img src="readme-images/2.4.png" width="375px" alt="">
+  <img src="readme-images/2.5.png" width="375px" alt="">
+  <img src="readme-images/2.6.png" width="375px" alt="">
+  <img src="readme-images/2.7.png" width="375px" alt="">
+  <img src="readme-images/2.8.png" width="375px" alt="">
 </details>
 
 
