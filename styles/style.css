@@ -178,8 +178,8 @@ klikt, maar dat hij schuift naar de andere?*/
 
   .background {
       background-color: rgb(247, 247, 247);
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
       padding-bottom: 7em;
   }
   
@@ -193,23 +193,41 @@ klikt, maar dat hij schuift naar de andere?*/
   .image-text-container {
       display: flex;
       align-items: center;
+      padding-top: 3em;
+      padding-bottom: 3em;
   }
   
   .image-text-container div img {
-      display: flex;
-      height: 6em;
-      width: 6em;
-      margin-right: 1.5em; 
-      align-items: end;
+    display: flex;
+      height: 8em;
+      width: 8em;
+      margin-right: 1em; 
+      align-items: center;
   }
   
   h4 {
+    display: flex;
       font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
       font-weight: 500;
+      font-size: medium;
+      margin-top: -2em;
+      align-items: center;
+      padding-right: -3em;
+      padding-top: 2em;
   }
   
-  div a {
+.links {
     display: flex;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 1em; 
+    margin-top: 1em; 
+    padding-left: 0.35em;
+}
+
+.links a {
     color: #000000;
-  }
+    text-decoration: none;
+    font-weight: 500;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: small;
+}
