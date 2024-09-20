@@ -39,8 +39,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://consumer.huawei.com/nl/ 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="reame-images/1.1.png" width="375px" alt="">
+  https://consumer.huawei.com/nl/  home screen
+  <img src="readme-images/1.1.png" width="375px" alt="">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
