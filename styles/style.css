@@ -211,11 +211,14 @@ klikt, maar dat hij schuift naar de andere?*/
       font-weight: 500;
       font-size: medium;
       margin-top: -2em;
-      align-items: center;
-      padding-right: -3em;
+      text-align: center;
       padding-top: 2em;
   }
   
+  /* ik probeer de a's onder de h4 naast elkaar te krijgen,
+   alleen elke keer als ik ze van plek wil veranderen gaan ze 
+   bijvoorbeeld in elkaar zitten ofzo, terwijl ze tegelijk gestijld worden, 
+   kan jij de a's naast elkaar onder de h4 krijgen? */
 .links {
     display: flex;
     gap: 1em; 
@@ -231,3 +234,31 @@ klikt, maar dat hij schuift naar de andere?*/
     font-weight: 700;
     font-size: small;
 }
+/* tot hier */
+
+/* hoe kan ik zorgen dat als je op de li laptop klikt, 
+je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft? */
+.product-image {
+    width: 8em; 
+    height: 8em; 
+    object-fit: cover; 
+}
+/* tot hier */
+
+.overlay {
+    opacity: 1; /* Begin met volledige zichtbaarheid */
+    transition: opacity 0.5s ease; /* Voeg een overgang toe voor de opacity */
+}
+
+.overlay.hidden {
+    opacity: 0; /* Maak het onzichtbaar */
+    pointer-events: none; /* Voorkom klikken terwijl het verborgen is */
+}
+
+main a:nth-of-type(3) {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blue; /* Voorbeeldkleur */
+    font-weight: bold; /* Vetgedrukt voorbeeld */
+    text-decoration: underline; /* Onderstreept voorbeeld */
+}
+

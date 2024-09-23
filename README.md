@@ -55,7 +55,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/2.5.png" width="375px" alt="">
   <img src="readme-images/2.6.png" width="375px" alt="">
   <img src="readme-images/2.7.png" width="375px" alt="">
-  <img src="readme-images/2.8.png" width="375px" alt="">
 </details>
 
 
