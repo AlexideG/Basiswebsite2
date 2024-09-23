@@ -255,10 +255,3 @@ je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft? *
     pointer-events: none; /* Voorkom klikken terwijl het verborgen is */
 }
 
-main a:nth-of-type(3) {
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: blue; /* Voorbeeldkleur */
-    font-weight: bold; /* Vetgedrukt voorbeeld */
-    text-decoration: underline; /* Onderstreept voorbeeld */
-}
-
