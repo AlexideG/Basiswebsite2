@@ -245,13 +245,58 @@ je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft? *
 }
 /* tot hier */
 
-.overlay {
-    opacity: 1; /* Begin met volledige zichtbaarheid */
-    transition: opacity 0.5s ease; /* Voeg een overgang toe voor de opacity */
+
+body > main > section > a:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    margin-left: 7.5em;
+    margin-right: 7.5em;
+    margin-top: -6em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 0.4em;
+    text-decoration: none;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9em;
 }
 
-.overlay.hidden {
-    opacity: 0; /* Maak het onzichtbaar */
-    pointer-events: none; /* Voorkom klikken terwijl het verborgen is */
+footer {
+    background-color: white;
+    margin-top: 4em;
+}
+
+footer h5 {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+footer div button {
+    text-decoration: none;
+    background-color: white;
+    color: #888888;
+    border: none;
+    font-size: x-large;
+    padding-top: 0.8em;
+    padding-right: 1.3em;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer span {
+    display: block;
+    height: 0.05em;
+    background-color: rgb(224, 224, 224);
+    margin-top: 0.4em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
