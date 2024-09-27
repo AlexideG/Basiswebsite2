@@ -1,94 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HUAWEI Nederland</title>
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAWEI Nederland</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- Logo en vaste navigatie met afbeeldingen -->
+            <img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo">
+            <ul class="nav-icons">
+                <li><a href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
+                <li><a href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
+                <!-- Hamburger-icoon voor mobiel -->
+                <li><button id="hamburger-icon"><img src="images/hamburger.png" alt="Menu"></button></li>
+            </ul>
+        </nav>
 
-    <body>
-        <header>
-            <nav> 
-                <img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+        <!-- Verborgen menu dat zichtbaar wordt op mobiel -->
+        <ul id="hamburger-menu" class="hidden">
+            <li><a id="a1" href="#">Store</a></li>
+            <li><span></span></li>
+            <li><a id="a1" href="#">Smartphone</a></li>
+            <li><span></span></li>
+            <div> </div>
+                <li><a id="a2" href="#">Support</a></li>
+                <li><a id="a3" href="#">Bestelling ></a></li>
+                <li><a id="a4" href="#">Aanmelden</a></li>
+            </div>
+        </ul>
+        <span></span>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Titel</h1>
+        <section>
+            <h2>HUAWEI Pura 70 Ultra</h2>
+            <h3>Fashion Forward</h3>
+            <div>
+                <a href="#" class="btn-ontdek">Ontdek</a>
+                <a href="#" class="btn-koop">Koop</a>
+            </div>
+            <img id="Product" src="images/pura-70-ultra-mob-removebg-preview.png" alt="De huawei pura 70 ultra, groene achterkant met 3 camera's">
+        </section>
+
+        <span></span>
+
+        <section>
+            <h2 id="More">More in Store</h2>
+            <div class="scroll-container">
+                <ul class="horizontal-list">
+                    <li class="active" data-content="phone">Phone</li>
+                    <li>Wearable</li>
+                    <li data-content="laptop">Laptop</li>
+                    <li>Tablet</li>
+                    <li>Audio</li>
                 </ul>
-            </nav>
-            <span></span>
-        </header>
-
-        <main>
-            <h1 class="visually-hidden">Titel</h1>
-            <section> 
-                <h2>HUAWEI Pura 70 Ultra</h2>
-                <h3>Fashion Forward</h3>
-                <div>
-                    <a href="#" class="btn-ontdek">Ontdek</a>
-                    <a href="#" class="btn-koop">Koop</a>
-                </div>
-                <img id="Product" src="images/pura-70-ultra-mob-removebg-preview.png" alt="De huawei pura 70 ultra, groene achterkant met 3 camera's">
-            </section>
-            <span></span>
-            <section>
-                <h2 id="More">More in Store</h2>
-                <div class="scroll-container">
-                    <ul class="horizontal-list">
-                        <li class="active" data-content="phone">Phone</li>
-                        <li>Wearable</li>
-                        <li data-content="laptop">Laptop</li>
-                        <li>Tablet</li>
-                        <li>Audio</li>
-                    </ul>
-                </div>
-
-                <!-- chat gpt, prompt: hoe kan ik zorgen dat als 
-                     je op de li laptop klikt, je nog steeds zo een
-                      wit vierkant ziet maar dan dat hij iets anders 
-                      weergeeft? -->
-                <div class="background">
-                    <div class="overlay image-text-container" id="phone">
-                        <div>
-                            <img src="images/nova-12i.jpg" alt="Huawei nova 12i" class="product-image">
-                        </div>
-                        <div>
-                            <h4>HUAWEI nova 12i</h4>
-                            <div class="links">
-                                <a href="#">ontdek ></a>
-                                <a href="#">koop ></a>
-                            </div>
-                        </div>
-                    </div>     
-                
-                    <div class="overlay image-text-container" id="laptop" style="display: none;">
-                        <div>
-                            <img src="images/matebook-d-14-2024.jpg" alt="Huawei Laptop" class="product-image">
-                        </div>
-                        <div>
-                            <h4>HUAWEI MateBook D 14</h4> 
-                            <div class="links">
-                                <a href="#">ontdek ></a>
-                                <a href="#">koop ></a>
-                            </div>
+            </div>
+            <div class="background">
+                <div class="overlay image-text-container" id="phone">
+                    <div>
+                        <img src="images/nova-12i.jpg" alt="Huawei nova 12i" class="product-image">
+                    </div>
+                    <div>
+                        <h4>HUAWEI nova 12i</h4>
+                        <div class="links">
+                            <a href="#">ontdek ></a>
+                            <a href="#">koop ></a>
                         </div>
                     </div>
                 </div>
-                <!-- tot hier -->
-                <a href="#">Ontdek alle phones</a>
-            </section>
-        </main>
-        <footer>
-            <div> <h5>PRODUCTEN</h5> <button>+</button> </div>
-            <span></span>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </footer>
-        <script src="scripts/script.js"></script>
-    </body>
+                <div class="overlay image-text-container" id="laptop" style="display: none;">
+                    <div>
+                        <img src="images/matebook-d-14-2024.jpg" alt="Huawei Laptop" class="product-image">
+                    </div>
+                    <div>
+                        <h4>HUAWEI MateBook D 14</h4>
+                        <div class="links">
+                            <a href="#">ontdek ></a>
+                            <a href="#">koop ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Ontdek alle phones</a>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h5>PRODUCTEN</h5>
+            <button>+</button>
+        </div>
+        <span></span>
+        <ul>
+            <li><img src="images/visa.png" alt="Visa"></li>
+            <li><img src="images/mastercard.png" alt="Mastercard"></li>
+            <li><img src="images/american-express.png" alt="American Express"></li>
+            <li><img src="images/deal.png" alt="Ideal"></li>
+        </ul>
+
+        <span></span>
+
+        <h6>Volg ons</h6>
+        <ul>
+            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+            <li><a href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
+        </ul>
+
+        <span></span>
+
+        <div>
+            <img src="images/Taal.png" alt="Taalkeuze">
+            <a href="#">Netherlands - Nederlands</a>
+        </div>
+
+        <span></span>
+
+        <ul id="other">
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Gebruiksvoorwaarden</a></li>
+            <li><a href="#">Privacyverklaring</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Cookie Instellingen</a></li>
+        </ul>
+
+        <h6 id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</h6>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
 </html>

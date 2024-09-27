@@ -64,4 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //Tot hier
-// tot
+//Tot hier
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerIcon = document.getElementById('hamburger-icon'); // Selecteer het hamburger icoon
+    const hamburgerMenu = document.getElementById('hamburger-menu'); // Selecteer het menu
+
+    // Voeg klik event toe aan het hamburger icoon
+    hamburgerIcon.addEventListener('click', function() {
+        // Toggle de show class op het menu
+        hamburgerMenu.classList.toggle('show');
+    });
+});
