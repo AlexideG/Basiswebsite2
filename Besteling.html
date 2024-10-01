@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUAWEI Nederland</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+    <body>
+        <header>
+            <nav class="main-nav">
+                <!-- Logo en vaste navigatie met afbeeldingen -->
+                <a href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a>
+                <ul class="nav-icons">
+                    <li><a href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
+                    <li><a href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
+                    <!-- Hamburger-icoon voor mobiel -->
+                    <li><button id="hamburger-icon"><img src="images/hamburger.png" alt="Menu"></button></li>
+                </ul>
+            </nav>
+
+
+            <!-- chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
+            opent met de volgende items: Store, Support, 
+            Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
+            elementen en de nav moet ook blijven, en als je dan 
+            weer op het plaatje klikt dan sluit het hamburger menu zich weer. -->
+            <ul id="hamburger-menu" class="hidden">
+                <li><a id="a1" href="#">Store</a></li>
+                <li><span></span></li>
+                <li><a id="a2" href="#">Support</a></li>
+                <li><a id="a3" href="#">Bestelling </a></li>
+                <li><a id="a4" href="#">Aanmelden</a></li>
+            </ul>
+            <!-- tot hier -->
+            <span></span>
+        </header>
+        <main id="P2">
+            <div class="background">
+                <div class="overlay image-text-container">
+                    <h2>Volg je Besteling</h2>
+                    <h3>Geregistreerde gebruikerslogin om bestelgegevens te bekijken.</h3>
+                    <a href="#">Log in/Inloggen</a>   
+                </div>
+                <div class="overlay image-text-container">
+                    <h4>of Voer de volgende gegevens in</h4>
+                    <form id="emailForm" action="#" method="post">
+                        <input type="email" id="email" name="email" required placeholder="E-mailadres*">
+                    </form>
+                    <form id="code" action="#" method="post">
+                        <input type="email" name="code" required placeholder="Verificatiecode">
+                    </form>
+                    <img id="dynamicImage" src="images/verificatie1.png" alt="Dynamische afbeelding">
+                    <button id="changeImageBtn"><img src="images/refresh.png" alt=""></button>
+                    <a id="status">Bekijk bestellingsstatus</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div>
+                <p> Start / Find your order</p>
+            </div>        
+            <span></span>
+            <ul>
+                <li><img src="images/visa.png" alt="Visa"></li>
+                <li><img src="images/mastercard.png" alt="Mastercard"></li>
+                <li><img src="images/american-express.png" alt="American Express"></li>
+                <li><img src="images/deal.png" alt="Ideal"></li>
+            </ul>
+    
+            <span></span>
+    
+            <p id="Volg">Volg ons</p>
+            <ul>
+                <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+                <li><a href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
+            </ul>
+    
+            <span></span>
+    
+            <div>
+                <img src="images/Taal.png" alt="Taalkeuze">
+                <a href="#">Netherlands - Nederlands</a>
+            </div>
+    
+            <span></span>
+    
+            <ul id="other">
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Gebruiksvoorwaarden</a></li>
+                <li><a href="#">Privacyverklaring</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Instellingen</a></li>
+            </ul>
+    
+            <p id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</p>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

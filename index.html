@@ -10,7 +10,7 @@
     <header>
         <nav class="main-nav">
             <!-- Logo en vaste navigatie met afbeeldingen -->
-            <img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo">
+            <a href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a>
             <ul class="nav-icons">
                 <li><a href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
                 <li><a href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
@@ -19,18 +19,20 @@
             </ul>
         </nav>
 
-        <!-- Verborgen menu dat zichtbaar wordt op mobiel -->
+
+        <!-- chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
+         opent met de volgende items: Store, Support, 
+         Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
+         elementen en de nav moet ook blijven, en als je dan 
+         weer op het plaatje klikt dan sluit het hamburger menu zich weer. -->
         <ul id="hamburger-menu" class="hidden">
             <li><a id="a1" href="#">Store</a></li>
             <li><span></span></li>
-            <li><a id="a1" href="#">Smartphone</a></li>
-            <li><span></span></li>
-            <div> </div>
-                <li><a id="a2" href="#">Support</a></li>
-                <li><a id="a3" href="#">Bestelling ></a></li>
-                <li><a id="a4" href="#">Aanmelden</a></li>
-            </div>
+            <li><a id="a2" href="#">Support</a></li>
+            <li><a id="a3" href="Besteling.html">Bestelling </a></li>
+            <li><a id="a4" href="#">Aanmelden</a></li>
         </ul>
+        <!-- tot hier -->
         <span></span>
     </header>
 
@@ -59,6 +61,7 @@
                     <li>Audio</li>
                 </ul>
             </div>
+
             <div class="background">
                 <div class="overlay image-text-container" id="phone">
                     <div>
@@ -91,9 +94,18 @@
 
     <footer>
         <div>
-            <h5>PRODUCTEN</h5>
-            <button>+</button>
-        </div>
+            <details id="product-details">
+                <summary>
+                    <span> PRODUCTEN </span>
+                    <img src="images/plus.png" alt="plus-icon" id="toggle-icon">
+                </summary>
+                <ul>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Wearable</a></li>
+                    <li><a href="#">Laptop</a></li>
+                </ul>
+            </details>
+        </div>        
         <span></span>
         <ul>
             <li><img src="images/visa.png" alt="Visa"></li>
@@ -104,7 +116,7 @@
 
         <span></span>
 
-        <h6>Volg ons</h6>
+        <p id="Volg">Volg ons</p>
         <ul>
             <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
             <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
@@ -129,7 +141,7 @@
             <li><a href="#">Cookie Instellingen</a></li>
         </ul>
 
-        <h6 id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</h6>
+        <p id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</p>
     </footer>
 
     <script src="scripts/script.js"></script>

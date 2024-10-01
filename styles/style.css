@@ -9,8 +9,21 @@
   /* CUSTOM PROPERTIES */
   /*********************/
   :root {
-      --color-text: #111;
-      --color-background: #eee;
+      --primarytext: black;
+      --secundairetext: white; 
+      --linktext: #017db6;
+      --text3: #7c7c7c;
+      --primarybackground: white;
+      --secundairebackground: rgb(247, 247, 247);
+      --backgroundcolor3: black;
+      --spangray: rgb(224, 224, 224); 
+      --unselectedtext: #c0c0c0;
+      --linktext: #017db6;
+      --primaryborder: #8d8d8d;
+      --border2: black; 
+      --border3: #8d8d8d;
+      --inputline: #ccc;
+      --valid: #4CAF50;
   }
   
   /****************/
@@ -21,15 +34,16 @@
       margin: 0;
       box-sizing: border-box;
       width: auto;
+      font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   header {
-    position: fixed; /* Vaste positie */
-    top: 0; /* Bovenaan de pagina */
-    left: 0; /* Aan de linkerkant van de pagina */
-    width: 100%; /* Volledige breedte */
-    background-color: white; /* Achtergrondkleur voor leesbaarheid */
-    z-index: 100; /* Zorgt ervoor dat het boven andere elementen staat */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: var(--primarybackground); 
+    z-index: 100; 
 }
 
   nav ul {
@@ -37,36 +51,45 @@
     flex-direction: row;
     list-style: none;
     justify-content: right;
-    margin-top: -2.5em;
+    margin-top: -2.15em;
     margin-right: 1em;
     gap: 1em;
+    
  }
  
  nav li img {
+    display: flex;
     height: 1.8em;
     width: 1.8em;
+    margin-top: -0.3em;
+    margin-bottom: 0.55em;
  }
  
  nav li button {
     border-style: none;
-    background-color: white;
+    background-color: var(--primarybackground);
  }
  
- /* Hamburger menu styling */
+ /* chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
+    opent met de volgende items: Store, Support, 
+    Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
+    elementen en de nav moet ook blijven, en als je dan 
+    weer op het plaatje klikt dan sluit het hamburger menu zich weer. */
+
  #hamburger-menu {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
-    display: none; /* Verberg het menu standaard */
+    background-color: var(--primarybackground);
+    display: none;
     z-index: 5;
  }
  
  #hamburger-menu.show {
-    display: flex; /* Laat het menu zien als de 'show' class aanwezig is */
-    margin-top: 4em;
+    display: flex; 
+    margin-top: 3.5em;
     flex-direction: column;
  }
  
@@ -74,10 +97,8 @@
     list-style: none;
     margin-left: 1em;
     padding-top: 0.5em;
- }
-
- #hamburger-menu div li {
-    padding-bottom: 1em;
+    padding-top: 1em;
+    color: var(--primarytext);
  }
 
  #hamburger-menu a {
@@ -88,33 +109,33 @@
  li span {
     display: block;
     height: 0.05em;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--spangray);
     margin-top: 1em;
     margin-right: 1em;
  }
 
  #a1 {
-    font-size: larger;
+    font-size: large;
     font-weight: 600;
-    padding-bottom: -1em;
-    color: #000;
+    color: var(--primarytext);
  }
 
 #a2 {
-    font-size: large;
+    font-size: medium;
     font-weight: 400;
-    color: #000;
+    color: var(--primarytext);
 }
 
 #a3 {
     font-weight: 290;
-    font-size: large;
-    color: #000;
+    font-size: medium;
+    color: var(--primarytext);
 }
 
 #a4 {
-    font-size: large;
-    color: #017db6;
+    font-size: medium;
+    color: var(--linktext);
+    font-weight: 500;
 }
 
  .hidden {
@@ -124,6 +145,9 @@
  .show {
     display: flex;
  }
+/* tot hier */
+
+
 
   html, body {
       overflow-x: hidden;
@@ -143,7 +167,7 @@
     margin-top: 0.1em;
       display: block;
       height: 0.05em;
-      background-color: rgb(224, 224, 224);
+      background-color: var(--spangray);
   }
   
   .visually-hidden {
@@ -164,6 +188,7 @@
       font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
       text-align: center;
       font-weight: 500;
+      color: var(--primarytext);
   }
   
   h3 {
@@ -172,6 +197,7 @@
       font-weight: 400;
       font-size: large;
       margin-top: 0.5em;
+      color: var(--primarytext);
   }
   
   #Product {
@@ -186,7 +212,7 @@
   main span {
       display: block;
       height: 0.6em;
-      background-color: rgb(247, 247, 247);
+      background-color: var(--secundairebackground);
       margin-top: -0.5em;
       position: relative;
       z-index: 2;
@@ -214,18 +240,18 @@
   }
   
   .btn-ontdek {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: var(--primarytext);
+      color: var(--secundairetext);
   }
   
   .btn-koop {
-      background-color: #ffffff;
-      color: #000000;
-      border: 0.1em solid #8d8d8d;
+      background-color: var(--primarybackground);
+      color: var(--primarytext);
+      border: 0.1em solid  var(--primaryborder);
   }
   
   main section:nth-of-type(2) {
-      background-color: rgb(247, 247, 247);
+      background-color: var(--secundairebackground);
       padding-top: 3em;
   }
   
@@ -255,7 +281,7 @@ klikt, maar dat hij schuift naar de andere?*/
   
   .horizontal-list li {
       font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #c0c0c0;
+      color: var(--unselectedtext);
       display: inline-block;
       padding-left: 1em;
       padding-right: 1em;
@@ -266,22 +292,22 @@ klikt, maar dat hij schuift naar de andere?*/
   }
   
   .horizontal-list li.active {
-      color: #000000;
+      color: var(--primarytext);
       font-weight: 500;
   }
   
   #active-line {
       position: absolute;
       bottom: 0;
-      height: 0.1em;
-      background-color: #000000;
+      height: 0.2em;
+      background-color: var(--primarytext);
       transition: left 0.4s ease, width 0.4s ease;
   }
 /*tot hier */
 
 
   .background {
-      background-color: rgb(247, 247, 247);
+      background-color: var(--secundairebackground);
       padding-left: 1em;
       padding-right: 1em;
       padding-bottom: 7em;
@@ -289,7 +315,7 @@ klikt, maar dat hij schuift naar de andere?*/
   
   .overlay {
       margin-top: 3em;
-      background-color: white;
+      background-color: var(--primarybackground);
       border-radius: 0.4em;
       padding: 2em;
   }
@@ -299,6 +325,7 @@ klikt, maar dat hij schuift naar de andere?*/
       align-items: center;
       padding-top: 3em;
       padding-bottom: 3em;
+      background-color: var(--primarybackground);
   }
   
   .image-text-container div img {
@@ -307,11 +334,13 @@ klikt, maar dat hij schuift naar de andere?*/
       width: 8em;
       margin-right: 1em; 
       align-items: center;
+      background-color: var(--primarybackground);
   }
   
   h4 {
     display: flex;
       font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: var(--primarytext);
       font-weight: 500;
       font-size: medium;
       margin-top: -2em;
@@ -319,7 +348,7 @@ klikt, maar dat hij schuift naar de andere?*/
       padding-top: 2em;
   }
   
-  /* ik probeer de a's onder de h4 naast elkaar te krijgen,
+  /* chat gpt, prompt: ik probeer de a's onder de h4 naast elkaar te krijgen,
    alleen elke keer als ik ze van plek wil veranderen gaan ze 
    bijvoorbeeld in elkaar zitten ofzo, terwijl ze tegelijk gestijld worden, 
    kan jij de a's naast elkaar onder de h4 krijgen? */
@@ -331,7 +360,7 @@ klikt, maar dat hij schuift naar de andere?*/
 }
 
 .links a {
-    color: #000000;
+    color: var(--primarytext);
     text-decoration: none;
     font-weight: 500;
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -340,7 +369,7 @@ klikt, maar dat hij schuift naar de andere?*/
 }
 /* tot hier */
 
-/* hoe kan ik zorgen dat als je op de li laptop klikt, 
+/* chat gpt, prompt: hoe kan ik zorgen dat als je op de li laptop klikt, 
 je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft? */
 .product-image {
     width: 8em; 
@@ -353,8 +382,8 @@ je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft? *
 body > main > section > a:nth-of-type(1) {
     display: flex;
     justify-content: center;
-    background-color: #000000;
-    color: white;
+    background-color: var(--backgroundcolor3);
+    color: var(--secundairetext);
     margin-left: 7.5em;
     margin-right: 7.5em;
     margin-top: -6em;
@@ -367,37 +396,70 @@ body > main > section > a:nth-of-type(1) {
 }
 
 footer {
-    background-color: white;
+    background-color: var(--primarybackground);
     margin-top: 4em;
 }
 
-footer h5 {
+footer div details {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: larger;
+    font-size: medium;
+    text-decoration: none;
+    background-color: var(--primarybackground);
+    color: var(--primarytext);
+    border: none;
+    padding-top: 1.8em;
+    padding-right: 1.3em;
+    width: 100%;
     padding-left: 1em;
-    padding-top: 1em;
 }
 
-footer div button {
-    text-decoration: none;
-    background-color: white;
-    color: #888888;
-    border: none;
-    font-size: x-large;
-    padding-top: 0.8em;
-    padding-right: 1.3em;
+details summary {
+    list-style: none; /* Remove the default list-style (which includes the triangle) */
+    position: relative;
+    justify-content: space-between;
+    font-size: medium;
+}
+
+details summary::-webkit-details-marker {
+    display: none; /* Remove the marker in WebKit-based browsers (e.g., Chrome, Safari) */
+}
+
+details summary::marker {
+    display: none; /* Remove the marker in Firefox and other browsers that use ::marker */
+}
+
+details summary span {
+    height: 0em;
+}
+
+div details summary img {
+    display: flex;
+    height: 1em;
+    width: 1em;
+    margin-left: 20em;
+}
+
+div details ul {
+    flex-direction: column;
+    gap: 0.1em;
+    font-size: medium;
+}
+
+div details li{
+    margin-top: 1em;
+    margin-left: -0.4em;
 }
 
 footer div {
     display: flex;
     justify-content: space-between;
+    background-color: var(--primarybackground);
 }
 
 footer span {
     display: block;
     height: 0.05em;
-    background-color: rgb(224, 224, 224);
+    background-color: var(--spangray);
     margin-top: 0.4em;
     margin-left: 1em;
     margin-right: 1em;
@@ -410,6 +472,7 @@ footer ul {
     grid-row: auto;
     gap: 2em;
     margin-left: 1.3em;
+    background-color: var(--primarybackground);
 }
 
 footer li img {
@@ -419,15 +482,28 @@ footer li img {
     margin-bottom: 0.5em;
 }
 
-footer h6 {
+footer p {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: larger;
     padding-left: 1em;
     font-weight: 600;
+    color: var(--text3);
+    background-color: var(--primarybackground);
+}
+
+#Volg {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+    padding-left: 1em;
+    font-weight: 600;
+    color: var(--primarytext);
+    background-color: var(--primarybackground);
 }
 
 #span3 {
     margin-bottom: 0.2em;
+    color: var(--spangray);
+
 }
 
 footer li a img {
@@ -436,7 +512,8 @@ footer li a img {
 
 footer div a {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #9c9c9c;
+    color: var(--text3);
+    background-color: var(--primarybackground);
     text-decoration: none;
     margin-top: -1em;
     margin-right: 7em;
@@ -449,25 +526,151 @@ footer div img {
     margin-left: 1em;
     margin-top: -1.5em;
 }
+
 #other {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-direction: column;
     gap: 1em;
     font-size: medium;
+    background-color: var(--primarybackground);
 }
 
 footer li a {
-    color: #7c7c7c;
+    color: var(--text3);
+    background-color: var(--primarybackground);
     text-decoration: none;
     margin-bottom: 3em;
     flex-direction: column;
 }
 
 #final {
+    background-color: var(--primarybackground);
     margin-top: 3em;
     font-weight: 400;
-    color: #7c7c7c;
+    color: var(--text3);
     font-size: medium;
     margin-bottom: 2em;
 }
 
+/* Stijling bestelling pagina */
+
+#P2 .background {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    margin-top: -5em;
+    background-color: var(--secundairebackground);
+}
+
+#P2 .overlay.image-text-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5em 0; 
+    margin-top: 2em; 
+    border-radius: 0.2em;
+    flex-direction: column;
+    color: var(--primarybackground);
+}
+
+#P2 .overlay.image-text-container h2 {
+    text-align: center;
+}
+
+#P2 .overlay.image-text-container h3 {
+    font-size: 1em;
+    margin-top: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
+    font-weight: 350;
+}
+
+#P2 .overlay.image-text-container a {
+    margin-top: 2em;
+    text-decoration: none;
+    border: var(--border2);
+    border-radius: 2em;
+    padding: 0.9em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    color: var(--secundairetext);
+    background-color: var(--backgroundcolor3);
+}
+
+#P2 div .overlay.image-text-container h4 {
+    font-weight: 350;
+    margin-top: -6em;
+}
+
+#P2 form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    width: 90%;
+}
+
+#P2 input[type="email"] {
+    border-style: none;
+    border-bottom: 0.02px solid var(--inputline);
+    padding-bottom: 1em;
+}
+
+input[type="email"]:focus {
+    outline: none; 
+    border: 0.3em solid var(--valid); 
+}
+
+input[type="email"]:focus {
+    border-bottom: 0.8em solid var(--valid); 
+}
+
+#P2 .overlay.image-text-container #dynamicImage {
+    margin-top: 4em;
+    height: 3em;
+    border-color: var(--border3);
+    border-style: solid;
+    border-width: 0.1em;
+    margin-right: 12em;
+}
+
+#P2 .overlay.image-text-container button img {
+    height: 3.5em;
+    width: 3em;
+} 
+
+#P2 .overlay.image-text-container button {
+    border-style: none;
+    background-color: var(--primarybackground);
+    margin-top: -3.3em;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 0.6s ease-in-out; 
+}
+
+#P2 .overlay.image-text-container #status {
+    margin-top: 3em;
+    text-decoration: none;
+    border: 0.15em solid var(--border3); 
+    border-radius: 2em;
+    padding: 0.9em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    color: var(--primarytext);
+    background-color: var(--primarybackground);
+    font-weight: 600;
+}
+
+footer div p {
+    font-weight: 400;
+    font-size: small;
+    padding-left: 1.5em;
+}

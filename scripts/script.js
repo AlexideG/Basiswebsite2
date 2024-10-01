@@ -1,78 +1,178 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const listItems = document.querySelectorAll('.horizontal-list li');
-
-    listItems.forEach(item => { // Loop door elk lijstitem
-        item.addEventListener('click', function() { // Voeg een klik-event toe aan elk item
-            listItems.forEach(i => i.classList.remove('active')); // Verwijder 'active' klasse van alle items
-            this.classList.add('active'); // Voeg 'active' klasse toe aan het aangeklikte item
-        });
-    });
-})
-
 //Chat gpt, prompt: Hoe kan je een animatie maken 
 //dat de lijn onder de li in plaats van 
 //instant verplaatst als je op een ander 
 //klikt, maar dat hij schuift naar de andere?
-
-
-// hoe kan ik zorgen dat als je op de li laptop klikt, je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft?
 document.addEventListener('DOMContentLoaded', function() {
-    const listItems = document.querySelectorAll('.horizontal-list li'); // Selecteer lijstitems
-    const contentContainers = document.querySelectorAll('.overlay.image-text-container'); // Selecteer inhoudcontainers
+    const scrollContainer = document.querySelector('.scroll-container');
+    
+    if (scrollContainer) {
+        const listItems = document.querySelectorAll('.horizontal-list li');
+        const contentContainers = document.querySelectorAll('.overlay.image-text-container');
+        
+        const activeLine = document.createElement('div');
+        activeLine.id = 'active-line';
+        scrollContainer.appendChild(activeLine);
 
-    // Lijn aanmaken die onder het actieve item komt
-    const activeLine = document.createElement('div'); // Maak een nieuwe div voor de actieve lijn
-    activeLine.id = 'active-line'; // Geef de div een ID
-    document.querySelector('.scroll-container').appendChild(activeLine); // Voeg de lijn toe aan de scroll-container
+        function moveActiveLine(item) {
+            const rect = item.getBoundingClientRect();
+            const scrollContainerRect = scrollContainer.getBoundingClientRect();
+            const scrollLeft = scrollContainer.scrollLeft;
+            const leftPosition = rect.left - scrollContainerRect.left + scrollLeft;
+            const width = rect.width * 0.6;
 
-    function moveActiveLine(item) { // Functie om de lijn te verplaatsen
-        const rect = item.getBoundingClientRect(); // Krijg de positie van het item
-        const scrollContainerRect = document.querySelector('.scroll-container').getBoundingClientRect(); // Krijg de positie van de scroll-container
-        const scrollLeft = document.querySelector('.scroll-container').scrollLeft; // Krijg de scroll positie
-        const leftPosition = rect.left - scrollContainerRect.left + scrollLeft; // Bereken de linkse positie van de lijn
-        const width = rect.width * 0.6; // Bepaal de breedte van de lijn
+            activeLine.style.left = `${leftPosition + (rect.width - width) / 2}px`;
+            activeLine.style.width = `${width}px`;
+            activeLine.style.transition = 'left 0.3s ease, width 0.3s ease';
+        }
 
-        activeLine.style.left = `${leftPosition + (rect.width - width) / 2}px`; // Stel de linkse positie van de lijn in
-        activeLine.style.width = `${width}px`; // Stel de breedte van de lijn in
+        function showContent(contentId) {
+            contentContainers.forEach(container => {
+                container.style.display = 'none';
+                if (container.id === contentId) {
+                    container.style.display = 'flex';
+                }
+            });
+        }
+
+        const initialActiveItem = document.querySelector('.horizontal-list li.active');
+        if (initialActiveItem) {
+            moveActiveLine(initialActiveItem);
+            showContent(initialActiveItem.getAttribute('data-content'));
+        }
+
+        listItems.forEach(item => {
+            item.addEventListener('click', function() {
+                listItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                moveActiveLine(this);
+                const contentId = this.getAttribute('data-content');
+                showContent(contentId);
+            });
+        });
+    } else {
+        console.log("Scroll-container niet aanwezig op deze pagina."); 
     }
+    // tot hier
 
-    function showContent(contentId) { // Functie om de inhoud te tonen
-        contentContainers.forEach(container => { // Loop door elke container
-            container.style.display = 'none'; // Verberg de container
-            if (container.id === contentId) { // Als de ID van de container overeenkomt
-                container.style.display = 'flex'; // Toon de container
+    // Hamburger menu functionaliteit
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const hamburgerImg = hamburgerIcon ? hamburgerIcon.querySelector('img') : null;
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const originalSrc = hamburgerImg ? hamburgerImg.src : '';
+    const closeIconSrc = 'images/kruisje.png';
+
+    if (hamburgerIcon && hamburgerMenu && hamburgerImg) {
+        hamburgerIcon.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('show');
+
+            if (hamburgerMenu.classList.contains('show')) {
+                hamburgerImg.src = closeIconSrc;
+                document.body.style.backgroundColor = 'white';
+                hamburgerMenu.style.display = 'block';
+            } else {
+                hamburgerImg.src = originalSrc;
+                document.body.style.backgroundColor = '';
+                hamburgerMenu.style.display = 'none';
             }
         });
     }
 
-    const initialActiveItem = document.querySelector('.horizontal-list li.active'); // Zoek het initiële actieve item
-    if (initialActiveItem) { // Als er een actief item is
-        moveActiveLine(initialActiveItem); // Verplaats de lijn naar het actieve item
-        showContent(initialActiveItem.getAttribute('data-content')); // Toon de bijbehorende inhoud
+    //chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
+    //opent met de volgende items: Store, Support, 
+    //Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
+    //elementen en de nav moet ook blijven, en als je dan 
+    //weer op het plaatje klikt dan sluit het hamburger menu zich weer.
+    const details = document.getElementById('product-details');
+    const icon = document.getElementById('toggle-icon');
+
+    if (details) {
+        if (icon) {
+            details.addEventListener('toggle', function () {
+                if (details.open) {
+                    icon.src = 'images/min.png'; 
+                } else {
+                    icon.src = 'images/plus.png'; 
+                }
+            });
+        } else {
+            console.log("Toggle icon niet gevonden.");
+        }
+    } else {
+        console.log("Product details niet gevonden.");
     }
+// tot hier
 
-    listItems.forEach(item => { // Loop door elk lijstitem opnieuw
-        item.addEventListener('click', function() { // Voeg een klik-event toe
-            listItems.forEach(i => i.classList.remove('active')); // Verwijder 'active' klasse van alle items
-            this.classList.add('active'); // Voeg 'active' klasse toe aan het aangeklikte item
 
-            moveActiveLine(this); // Verplaats de lijn naar het aangeklikte item
+// chat gpt, prompt: hoe kan ik een invul plek maken waar je bijvoorbeeld je email ik kan vullen?
+    const emailForm = document.getElementById('emailForm');
+    const emailInput = document.getElementById('email');
 
-            const contentId = this.getAttribute('data-content'); // Haal de content ID van het aangeklikte item
-            showContent(contentId); // Toon de bijbehorende inhoud
+    if (emailForm && emailInput) {
+        emailInput.addEventListener('input', function () {
+            const emailValue = emailInput.value;
+
+            if (emailValue === "") {
+                emailInput.style.borderBottom = '0.1em solid #ccc';
+                emailInput.style.color = 'black';
+            } else if (emailValue.endsWith('@gmail.com')) {
+                emailInput.style.borderBottom = '0.1em solid #4CAF50';
+                emailInput.style.color = 'black';
+            } else {
+                emailInput.style.borderBottom = '0.1em solid red';
+                emailInput.style.color = 'red';
+            }
         });
-    });
-});
-//Tot hier
-//Tot hier
 
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerIcon = document.getElementById('hamburger-icon'); // Selecteer het hamburger icoon
-    const hamburgerMenu = document.getElementById('hamburger-menu'); // Selecteer het menu
+        emailForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const emailValue = emailInput.value;
 
-    // Voeg klik event toe aan het hamburger icoon
-    hamburgerIcon.addEventListener('click', function() {
-        // Toggle de show class op het menu
-        hamburgerMenu.classList.toggle('show');
-    });
+            if (emailValue === "") {
+                emailInput.style.borderBottom = '0.1em solid #ccc';
+                emailInput.style.color = 'black';
+            } else if (emailValue.endsWith('@gmail.com')) {
+                emailInput.style.borderBottom = '0.1em solid #4CAF50';
+                emailInput.style.color = 'black';
+            } else {
+                emailInput.style.borderBottom = '0.1em solid red';
+                emailInput.style.color = 'red';
+            }
+        });
+    }
+// tot hier
+
+// hij moet elke keer als 
+//je op die knop klikt een van 3 afbeeldingen laten zien, en 
+//dan gewoon een random afbeelding kiezen, nu is het als ik erop 
+//klik dat de afbeelding wel veranderd, alleen hij doet het maar 1 keer
+    const imageElement = document.getElementById('dynamicImage');
+    const changeImageButton = document.getElementById('changeImageBtn');
+
+    if (changeImageButton && imageElement) {
+        const images = [
+            'images/verificatie1.png',
+            'images/verificatie2.png',
+            'images/verificatie3.png'
+        ];
+
+        let currentImageIndex = -1;
+
+        changeImageButton.addEventListener('click', function () {
+            let randomIndex;
+
+            do {
+                randomIndex = Math.floor(Math.random() * images.length);
+            } while (randomIndex === currentImageIndex);
+
+            currentImageIndex = randomIndex;
+
+            changeImageButton.classList.add('rotate');
+
+            setTimeout(() => {
+                imageElement.src = images[currentImageIndex];
+                changeImageButton.classList.remove('rotate');
+            }, 600);
+        });
+    }
 });
+//tot hier

@@ -64,6 +64,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
   
 
+  postief:
+  - duidelijke taal
+  - buttons zien eruit als buttuns en linkjes als linkjes
+  - gebruikt lang
+  - unieke pagina titels
+  - a's worden gebruikt
+
+  negatief:
+  - errors in de html
+  - wel focus alleen, soms niet duidelijk waar je zit
+  - niet veel gebruik van ul, waar het wel kan
+  - niet alle img hebben een alt
+  - veel div's in divs's
+
 </details>
 
 
@@ -74,13 +88,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="" width="375px" alt="#">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/bs1.1.png" width="375px" alt="#">
+  <img src="readme-images/bs1.2.png" width="375px" alt="#">
+  
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/bs2.1.png" width="375px" alt="#">
 
 </details>
 
@@ -138,11 +154,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Alexi      
+  | ---           
+  | dit bespreken  
+  | en dat ook nog 
+  | ...            
 
 
   ### Verslag van meeting
