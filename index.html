@@ -9,16 +9,16 @@
 <body>
     <header>
         <nav class="main-nav">
-            <!-- Logo en vaste navigatie met afbeeldingen -->
-            <a href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a>
+            <a aria-label="terug naar home" href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a> 
+            <!-- https://consumer.huawei.com/nl/ -->
             <ul class="nav-icons">
-                <li><a href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
-                <li><a href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
-                <!-- Hamburger-icoon voor mobiel -->
+                <li><a aria-label="Zoek naar producten" href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
+                <!-- https://consumer.huawei.com/nl/ -->
+                <li><a aria-label="zie wat je in je winkelwagen heb" href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
+                <!-- https://consumer.huawei.com/nl/ -->
                 <li><button id="hamburger-icon"><img src="images/hamburger.png" alt="Menu"></button></li>
             </ul>
         </nav>
-
 
         <!-- chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
          opent met de volgende items: Store, Support, 
@@ -26,78 +26,91 @@
          elementen en de nav moet ook blijven, en als je dan 
          weer op het plaatje klikt dan sluit het hamburger menu zich weer. -->
         <ul id="hamburger-menu" class="hidden">
-            <li><a id="a1" href="#">Store</a></li>
+            <li><a aria-label="Naar de home pagina" id="a1" href="#">Store</a></li>
             <li><span></span></li>
-            <li><a id="a2" href="#">Support</a></li>
-            <li><a id="a3" href="Besteling.html">Bestelling </a></li>
-            <li><a id="a4" href="#">Aanmelden</a></li>
+            <li><a aria-label="Hulp" id="a2" href="#">Support</a></li>
+            <li><a aria-label="Naar jouw bestelgegevens" id="a3" href="Besteling.html">Bestelling </a></li>
+            <li><a aria-label="Meld je aan" id="a4" href="#">Aanmelden</a></li>
         </ul>
         <!-- tot hier -->
         <span></span>
     </header>
 
     <main>
-        <h1 class="visually-hidden">Titel</h1>
+        <h1 class="visually-hidden">Home pagina Huawei</h1>
         <section>
             <h2>HUAWEI Pura 70 Ultra</h2>
             <h3>Fashion Forward</h3>
             <div>
-                <a href="#" class="btn-ontdek">Ontdek</a>
-                <a href="#" class="btn-koop">Koop</a>
+                <a aria-label="Meer info over de pura 70 ultra" href="#" class="btn-ontdek">Ontdek</a>
+                <a aria-label="koop de pura 70 ultra" href="#" class="btn-koop">Koop</a>
             </div>
             <img id="Product" src="images/pura-70-ultra-mob-removebg-preview.png" alt="De huawei pura 70 ultra, groene achterkant met 3 camera's">
+            <!-- https://consumer.huawei.com/nl/ -->
         </section>
 
         <span></span>
 
+        <!-- Chat gpt, prompt: Hoe kan je een animatie maken 
+            dat de lijn onder de li in plaats van 
+            instant verplaatst als je op een ander 
+            klikt, maar dat hij schuift naar de andere? -->
         <section>
             <h2 id="More">More in Store</h2>
             <div class="scroll-container">
                 <ul class="horizontal-list">
-                    <li class="active" data-content="phone">Phone</li>
-                    <li>Wearable</li>
-                    <li data-content="laptop">Laptop</li>
-                    <li>Tablet</li>
-                    <li>Audio</li>
+                    <li aria-label="browse phones" class="active" data-content="phone" tabindex="0">Phone</li>
+                    <li aria-label="browse wearable" tabindex="0">Wearable</li>
+                    <li aria-label="browse laptops" data-content="laptop" tabindex="0">Laptop</li>
+                    <li aria-label="browse tablets" tabindex="0">Tablet</li>
+                    <li aria-label="browse earbbuds" tabindex="0">Audio</li>
                 </ul>
             </div>
+        <!-- tot hier -->
 
+            <!-- chat gpt, prompt: hoe kan ik zorgen dat als je op de li laptop klikt, 
+            je nog steeds zo een wit vierkant ziet maar dan dat hij iets anders weergeeft?  -->
             <div class="background">
                 <div class="overlay image-text-container" id="phone">
                     <div>
-                        <img src="images/nova-12i.jpg" alt="Huawei nova 12i" class="product-image">
+                        <img src="images/nova-12i.jpg" alt="Huawei nova 12i, donkerblauwe kleur, grote ronde camera aan bovenkant van de achterkant" class="product-image">
+                        <!-- https://consumer.huawei.com/nl/ -->
                     </div>
                     <div>
                         <h4>HUAWEI nova 12i</h4>
                         <div class="links">
-                            <a href="#">ontdek ></a>
-                            <a href="#">koop ></a>
+                            <a aria-label="Meer info over de nova 12i" href="#">ontdek ></a>
+                            <a aria-label="Koop de nova 21i" href="#">koop ></a>
                         </div>
                     </div>
                 </div>
                 <div class="overlay image-text-container" id="laptop" style="display: none;">
                     <div>
-                        <img src="images/matebook-d-14-2024.jpg" alt="Huawei Laptop" class="product-image">
+                        <img src="images/matebook-d-14-2024.jpg" alt="Huawei matebookd 14, klein formaat laptop, met zilvere kleur" class="product-image">
+                        <!-- https://consumer.huawei.com/nl/ -->
                     </div>
                     <div>
                         <h4>HUAWEI MateBook D 14</h4>
                         <div class="links">
-                            <a href="#">ontdek ></a>
-                            <a href="#">koop ></a>
+                            <a aria-label="Meer info over de MateBook D 14" href="#">ontdek ></a>
+                            <a aria-label="Koop de HMateBook D 14" href="#">koop ></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#">Ontdek alle phones</a>
+            <!-- tot hier -->
+            <a aria-label="Browse meer phones" href="#">Ontdek alle phones</a>
         </section>
     </main>
 
     <footer>
         <div>
+            <!-- Hulp van david -->
             <details id="product-details">
-                <summary>
+                <summary aria-label="Alle soorten producten">
                     <span> PRODUCTEN </span>
-                    <img src="images/plus.png" alt="plus-icon" id="toggle-icon">
+                    <img src="images/plus.png" alt="Open" id="toggle-icon">
+                    <!-- https://consumer.huawei.com/nl/ -->
                 </summary>
                 <ul>
                     <li><a href="#">Smartphones</a></li>
@@ -105,40 +118,50 @@
                     <li><a href="#">Laptop</a></li>
                 </ul>
             </details>
-        </div>        
+        </div>     
+           <!-- tot hier  -->
         <span></span>
         <ul>
             <li><img src="images/visa.png" alt="Visa"></li>
+            <!-- https://consumer.huawei.com/nl/ -->
             <li><img src="images/mastercard.png" alt="Mastercard"></li>
+            <!-- https://consumer.huawei.com/nl/ -->
             <li><img src="images/american-express.png" alt="American Express"></li>
+            <!-- https://consumer.huawei.com/nl/ -->
             <li><img src="images/deal.png" alt="Ideal"></li>
+            <!-- https://consumer.huawei.com/nl/ -->
         </ul>
 
         <span></span>
 
         <p id="Volg">Volg ons</p>
         <ul>
-            <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
-            <li><a href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
+            <li><a aria-label="Ga naar onze Facebook" href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <!-- https://consumer.huawei.com/nl/ -->
+            <li><a aria-label="Ga naar onze Twitter" href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+            <!-- https://consumer.huawei.com/nl/ -->
+            <li><a aria-label="Ga naar onze Youtube" href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+            <!-- https://consumer.huawei.com/nl/ -->
+            <li><a aria-label="Ga naar onze Instagram" href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
+            <!-- https://consumer.huawei.com/nl/ -->
         </ul>
 
         <span></span>
 
         <div>
-            <img src="images/Taal.png" alt="Taalkeuze">
-            <a href="#">Netherlands - Nederlands</a>
+            <img src="images/Taal.png" alt="">
+            <!-- https://consumer.huawei.com/nl/ -->
+            <a aria-label="Jouw regio" href="#">Netherlands - Nederlands</a>
         </div>
 
         <span></span>
 
         <ul id="other">
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Gebruiksvoorwaarden</a></li>
-            <li><a href="#">Privacyverklaring</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Cookie Instellingen</a></li>
+            <li><a aria-label="Bekijk de sitemap" href="#">Sitemap</a></li>
+            <li><a aria-label="Bekijk de Gebruiksvoorwaarden" href="#">Gebruiksvoorwaarden</a></li>
+            <li><a aria-label="Bekijk de Privacyverklaring" href="#">Privacyverklaring</a></li>
+            <li><a aria-label="Bekijk de Cookie policy" href="#">Cookie Policy</a></li>
+            <li><a aria-label="Bekijk de cookie Instellingen" href="#">Cookie Instellingen</a></li>
         </ul>
 
         <p id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</p>

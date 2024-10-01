@@ -25,7 +25,27 @@
       --inputline: #ccc;
       --valid: #4CAF50;
   }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primarytext: rgb(0, 0, 0);
+      --secundairetext: rgb(131, 131, 131);
+      --linktext: #4fc3f7;
+      --text3: #000000;
+      --primarybackground: #464646;
+      --secundairebackground: #707070;
+      --backgroundcolor3: #020202;
+      --spangray: #303030;
+      --unselectedtext: #000000;
+      --primaryborder: #616161;
+      --border2: #757575;
+      --border3: #616161;
+      --inputline: #4caf50;
+      --valid: #81c784;
+    }
+  }
   
+
   /****************/
   /* JOUW STYLING */
   /****************/
@@ -207,6 +227,7 @@
       margin-top: -9.5em;
       position: relative;
       z-index: 1;
+      color: var(--primarybackground);
   }
   
   main span {
@@ -242,6 +263,7 @@
   .btn-ontdek {
       background-color: var(--primarytext);
       color: var(--secundairetext);
+      border: 0.1em solid var(--primaryborder);
   }
   
   .btn-koop {
@@ -290,11 +312,16 @@ klikt, maar dat hij schuift naar de andere?*/
       transition: background-color 0.3s ease, color 0.3s ease;
       cursor: pointer;
   }
-  
-  .horizontal-list li.active {
-      color: var(--primarytext);
-      font-weight: 500;
+
+  .horizontal-list li :focus{
+    border: var(--backgroundcolor3);
   }
+
+
+.horizontal-list li.active {
+    color: var(--primarytext); 
+    font-weight: 600;
+}
   
   #active-line {
       position: absolute;
@@ -304,7 +331,6 @@ klikt, maar dat hij schuift naar de andere?*/
       transition: left 0.4s ease, width 0.4s ease;
   }
 /*tot hier */
-
 
   .background {
       background-color: var(--secundairebackground);
@@ -397,7 +423,8 @@ body > main > section > a:nth-of-type(1) {
 
 footer {
     background-color: var(--primarybackground);
-    margin-top: 4em;
+    margin-top: 3em;
+    padding-bottom: 1em;
 }
 
 footer div details {
@@ -414,18 +441,18 @@ footer div details {
 }
 
 details summary {
-    list-style: none; /* Remove the default list-style (which includes the triangle) */
+    list-style: none; 
     position: relative;
     justify-content: space-between;
     font-size: medium;
 }
 
 details summary::-webkit-details-marker {
-    display: none; /* Remove the marker in WebKit-based browsers (e.g., Chrome, Safari) */
+    display: none; 
 }
 
 details summary::marker {
-    display: none; /* Remove the marker in Firefox and other browsers that use ::marker */
+    display: none; 
 }
 
 details summary span {
@@ -555,10 +582,10 @@ footer li a {
 /* Stijling bestelling pagina */
 
 #P2 .background {
-    padding-bottom: 2em;
     padding-top: 2em;
     margin-top: -5em;
     background-color: var(--secundairebackground);
+    margin-bottom: -3em;
 }
 
 #P2 .overlay.image-text-container {
@@ -673,4 +700,5 @@ footer div p {
     font-weight: 400;
     font-size: small;
     padding-left: 1.5em;
+    margin-top: 3em;
 }

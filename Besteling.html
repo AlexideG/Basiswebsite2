@@ -9,33 +9,35 @@
     <body>
         <header>
             <nav class="main-nav">
-                <!-- Logo en vaste navigatie met afbeeldingen -->
-                <a href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a>
+                <a aria-label="terug naar home" href="index.html"><img id="logo" src="images/Screenshot2024-09-13111130.png" alt="Huawei logo"></a> 
+                <!-- https://consumer.huawei.com/nl/ -->
                 <ul class="nav-icons">
-                    <li><a href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
-                    <li><a href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
-                    <!-- Hamburger-icoon voor mobiel -->
+                    <li><a aria-label="Zoek naar producten" href="#"><img src="images/zoeken.png" alt="Zoeken"></a></li>
+                    <!-- https://consumer.huawei.com/nl/ -->
+                    <li><a aria-label="zie wat je in je winkelwagen heb" href="#"><img src="images/winkelwagen.png" alt="Winkelwagen"></a></li>
+                    <!-- https://consumer.huawei.com/nl/ -->
                     <li><button id="hamburger-icon"><img src="images/hamburger.png" alt="Menu"></button></li>
                 </ul>
             </nav>
-
-
+    
             <!-- chat gpt, prompt: kan jij toevoegen aan deze code, dat als je op het 3de plaatje klikt in de nav, er een hamburger menu 
-            opent met de volgende items: Store, Support, 
-            Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
-            elementen en de nav moet ook blijven, en als je dan 
-            weer op het plaatje klikt dan sluit het hamburger menu zich weer. -->
+             opent met de volgende items: Store, Support, 
+             Bestelling, Aanmelden. de pagina moet helemaal wit zijn behalve die 
+             elementen en de nav moet ook blijven, en als je dan 
+             weer op het plaatje klikt dan sluit het hamburger menu zich weer. -->
             <ul id="hamburger-menu" class="hidden">
-                <li><a id="a1" href="#">Store</a></li>
+                <li><a aria-label="Naar de home pagina" id="a1" href="#">Store</a></li>
                 <li><span></span></li>
-                <li><a id="a2" href="#">Support</a></li>
-                <li><a id="a3" href="#">Bestelling </a></li>
-                <li><a id="a4" href="#">Aanmelden</a></li>
+                <li><a aria-label="Hulp" id="a2" href="#">Support</a></li>
+                <li><a aria-label="Naar jouw bestelgegevens" id="a3" href="Besteling.html">Bestelling </a></li>
+                <li><a aria-label="Meld je aan" id="a4" href="#">Aanmelden</a></li>
             </ul>
             <!-- tot hier -->
             <span></span>
         </header>
+
         <main id="P2">
+            <h1 class="visually-hidden">Check je bestelling pagina huawei</h1>
             <div class="background">
                 <div class="overlay image-text-container">
                     <h2>Volg je Besteling</h2>
@@ -51,8 +53,10 @@
                         <input type="email" name="code" required placeholder="Verificatiecode">
                     </form>
                     <img id="dynamicImage" src="images/verificatie1.png" alt="Dynamische afbeelding">
-                    <button id="changeImageBtn"><img src="images/refresh.png" alt=""></button>
-                    <a id="status">Bekijk bestellingsstatus</a>
+                    <!-- https://consumer.huawei.com/nl/ -->
+                    <button id="changeImageBtn"><img src="images/refresh.png" alt="refresh"></button>
+                    <!-- https://consumer.huawei.com/nl/ -->
+                    <a id="status" href="#">Bekijk bestellingsstatus</a>
                 </div>
             </div>
         </main>
@@ -64,36 +68,44 @@
             <span></span>
             <ul>
                 <li><img src="images/visa.png" alt="Visa"></li>
+                <!-- https://consumer.huawei.com/nl/ -->
                 <li><img src="images/mastercard.png" alt="Mastercard"></li>
+                <!-- https://consumer.huawei.com/nl/ -->
                 <li><img src="images/american-express.png" alt="American Express"></li>
+                <!-- https://consumer.huawei.com/nl/ -->
                 <li><img src="images/deal.png" alt="Ideal"></li>
+                <!-- https://consumer.huawei.com/nl/ -->
             </ul>
     
             <span></span>
     
             <p id="Volg">Volg ons</p>
             <ul>
-                <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
-                <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
-                <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
-                <li><a href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
+                <li><a aria-label="Ga naar onze Facebook" href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <!-- https://consumer.huawei.com/nl/ -->
+                <li><a aria-label="Ga naar onze Twitter" href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+                <!-- https://consumer.huawei.com/nl/ -->
+                <li><a aria-label="Ga naar onze Youtube" href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+                <!-- https://consumer.huawei.com/nl/ -->
+                <li><a aria-label="Ga naar onze Instagram" href="#"><img src="images/Insta.png" alt="Instagram"></a></li>
             </ul>
     
             <span></span>
     
             <div>
-                <img src="images/Taal.png" alt="Taalkeuze">
-                <a href="#">Netherlands - Nederlands</a>
+                <img src="images/Taal.png" alt="">
+                <!-- https://consumer.huawei.com/nl/ -->
+                <a aria-label="Jouw regio" href="#">Netherlands - Nederlands</a>
             </div>
     
             <span></span>
     
             <ul id="other">
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Gebruiksvoorwaarden</a></li>
-                <li><a href="#">Privacyverklaring</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-                <li><a href="#">Cookie Instellingen</a></li>
+                <li><a aria-label="Bekijk de sitemap" href="#">Sitemap</a></li>
+                <li><a aria-label="Bekijk de Gebruiksvoorwaarden" href="#">Gebruiksvoorwaarden</a></li>
+                <li><a aria-label="Bekijk de Privacyverklaring" href="#">Privacyverklaring</a></li>
+                <li><a aria-label="Bekijk de Cookie policy" href="#">Cookie Policy</a></li>
+                <li><a aria-label="Bekijk de cookie Instellingen" href="#">Cookie Instellingen</a></li>
             </ul>
     
             <p id="final">@2024 Huawei Device Co., Ltd. Alle rechten voorbehouden.</p>
