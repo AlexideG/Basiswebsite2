@@ -237,19 +237,25 @@ neagtief:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/volledigesite.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  - Toegankelijkheid testen
+  - algemene code kennis opgedaan
+  - Maken hamburgermenu
+  - maken animaties
+  - hoe details werkt
+  - aria labels
+  - kleuren in root zetten
+  - dark mode
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  - De dark mode is niet helemaal zoals ik hem zou willen
+  - Liep veel achter met planning
+  - website is niet 100% toegankelijk
+  <img src="readme-images/darkmodefail.png" width="375px" alt="uitomst opdracht 1">
 </details>
 
 

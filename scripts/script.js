@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 //tot hier
 
+// chat gpt, prompt: kan jij zorgen dta als iemand op het plusje klikt de afbeelding veranderd?
     if (details && icon) {
         details.addEventListener('toggle', function () {
             if (details.open) {
@@ -173,3 +174,4 @@ document.addEventListener('DOMContentLoaded', function() {
         changeImageButton.addEventListener('click', changeImage);
     }
 });
+// tot hier
